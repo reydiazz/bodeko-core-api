@@ -12,7 +12,6 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
-import org.springframework.web.multipart.MaxUploadSizeExceededException;
 import org.springframework.web.servlet.resource.NoResourceFoundException;
 
 import java.util.List;
@@ -166,7 +165,7 @@ public class GlobalExceptionHandler {
         ErrorResponse response = ErrorResponse.builder()
                 .status(status.value())
                 .code("BAD_CREDENTIALS")
-                .message("Username or password incorrect.")
+                .message("Email or password incorrect.")
                 .build();
         return ResponseEntity.status(status).body(response);
     }
@@ -223,17 +222,6 @@ public class GlobalExceptionHandler {
                 .status(status.value())
                 .code("INVALID_PARAMETER_TYPE")
                 .message("The data type of a provided parameter is invalid.")
-                .build();
-        return ResponseEntity.status(status).body(response);
-    }
-
-    @ExceptionHandler(MaxUploadSizeExceededException.class)
-    public ResponseEntity<ErrorResponse> handleMaxUploadSizeExceeded(MaxUploadSizeExceededException ex) {
-        HttpStatus status = HttpStatus.BAD_REQUEST;
-        ErrorResponse response = ErrorResponse.builder()
-                .status(status.value())
-                .code("FILE_TOO_LARGE")
-                .message("The file is too large. The maximum allowed size is 2 MB.")
                 .build();
         return ResponseEntity.status(status).body(response);
     }
