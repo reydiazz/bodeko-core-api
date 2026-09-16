@@ -6,7 +6,6 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.*;
 
-import java.time.LocalDateTime;
 import java.time.OffsetDateTime;
 import java.util.UUID;
 
@@ -40,6 +39,6 @@ public class User {
     private OffsetDateTime createdAt = OffsetDateTime.now();
 
     @Column(name = "subscription_limit")
-    private LocalDateTime subscriptionLimit;
+    private OffsetDateTime subscriptionLimit;
 
 }
