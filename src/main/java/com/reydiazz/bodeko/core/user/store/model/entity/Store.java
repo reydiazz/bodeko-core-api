@@ -28,4 +28,9 @@ public class Store {
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
+    private void update(String name , String subdomain) {
+        this.name = name;
+        this.subdomain = subdomain;
+    }
+
 }
