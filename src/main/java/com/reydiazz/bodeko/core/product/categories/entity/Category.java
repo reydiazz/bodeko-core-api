@@ -25,8 +25,7 @@ public class Category {
     @JoinColumn(name = "store_id", nullable = false)
     private Store store;
 
-    public  void update (UUID id,String name){
-        this.id=id;
+    public  void update (String name){
         this.name=name;
     }
 }
