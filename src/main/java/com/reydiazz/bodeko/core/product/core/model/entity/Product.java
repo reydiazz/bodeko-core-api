@@ -1,6 +1,7 @@
 package com.reydiazz.bodeko.core.product.core.model.entity;
 
 
+import com.reydiazz.bodeko.core.product.categories.entity.Category;
 import com.reydiazz.bodeko.core.product.core.model.enums.ProductStatus;
 import com.reydiazz.bodeko.core.user.store.model.entity.Store;
 import jakarta.persistence.*;
@@ -44,11 +45,16 @@ public class Product {
     @JoinColumn(name = "store_id", nullable = false)
     private Store store;
 
-    public  void  update(String name,String description,BigDecimal price,Integer stock) {
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "category_id", nullable = false)
+    private Category category;
+
+    public  void  update(String name,String description,BigDecimal price,Integer stock,Category category) {
         this.name = name;
         this.description = description;
         this.price = price;
         this.stock = stock;
+        this.category = category;
     }
 
 
