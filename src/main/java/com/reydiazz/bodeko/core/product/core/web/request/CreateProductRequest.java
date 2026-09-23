@@ -16,8 +16,6 @@ public record CreateProductRequest(
         BigDecimal price,
         @NotNull(message = "Stock is required")
         @PositiveOrZero(message = "Stock cannot be negative")
-        Integer stock,
-        @NotBlank(message = "Image is required")
-        String imageUrl
+        Integer stock
 ) {
 }
