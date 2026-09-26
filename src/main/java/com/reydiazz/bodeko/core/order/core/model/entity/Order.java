@@ -40,4 +40,12 @@ public class Order {
     @JoinColumn(name = "store_id", nullable = false)
     private Store store;
 
+    public void update(String name, String clientEmail, String clientName, BigDecimal total, OrderStatus status) {
+        this.name = name;
+        this.clientEmail = clientEmail;
+        this.clientName = clientName;
+        this.total = total;
+        this.status = status;
+    }
+
 }
