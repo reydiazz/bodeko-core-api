@@ -6,6 +6,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.math.BigDecimal;
+import java.time.OffsetDateTime;
 import java.util.UUID;
 
 @Builder
@@ -39,6 +40,9 @@ public class Order {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "store_id", nullable = false)
     private Store store;
+
+    @Column(name = "created_at")
+    private OffsetDateTime createdAt;
 
     public void update(String name, String clientEmail, String clientName, BigDecimal total, OrderStatus status) {
         this.name = name;
