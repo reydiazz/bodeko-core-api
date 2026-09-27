@@ -15,7 +15,7 @@ import java.util.UUID;
 @Table(name = "order_details")
 @RequiredArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
-public class OrderDetails {
+public class OrderDetail {
 
     @Id
     @Column(name = "id", updatable = false, nullable = false)
