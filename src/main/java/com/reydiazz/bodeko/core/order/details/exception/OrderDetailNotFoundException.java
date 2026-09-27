@@ -1,4 +1,4 @@
-package com.reydiazz.bodeko.core.order.orderDetails.exception;
+package com.reydiazz.bodeko.core.order.details.exception;
 
 import java.util.UUID;
 

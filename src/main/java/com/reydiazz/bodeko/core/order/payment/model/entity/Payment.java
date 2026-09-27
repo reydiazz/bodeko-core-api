@@ -40,4 +40,8 @@ public class Payment {
 
     @Column(name = "created_at", insertable = false, updatable = false)
     private OffsetDateTime createdAt;
+
+    public  void update(PaymentStatus status) {
+        this.status = status;
+    }
 }

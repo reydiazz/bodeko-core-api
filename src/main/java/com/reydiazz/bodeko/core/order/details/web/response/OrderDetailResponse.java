@@ -1,4 +1,4 @@
-package com.reydiazz.bodeko.core.order.orderDetails.web.response;
+package com.reydiazz.bodeko.core.order.details.web.response;
 
 import java.math.BigDecimal;
 import java.util.UUID;

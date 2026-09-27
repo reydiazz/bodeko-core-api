@@ -1,4 +1,4 @@
-package com.reydiazz.bodeko.core.order.orderDetails.web.request;
+package com.reydiazz.bodeko.core.order.details.web.request;
 
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;

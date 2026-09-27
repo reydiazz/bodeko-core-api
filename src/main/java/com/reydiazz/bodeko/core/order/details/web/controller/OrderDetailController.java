@@ -1,9 +1,9 @@
-package com.reydiazz.bodeko.core.order.orderDetails.web.controller;
+package com.reydiazz.bodeko.core.order.details.web.controller;
 
-import com.reydiazz.bodeko.core.order.orderDetails.service.OrderDetailService;
-import com.reydiazz.bodeko.core.order.orderDetails.web.request.CreateOrderDetailRequest;
-import com.reydiazz.bodeko.core.order.orderDetails.web.request.UpdateOrderDetailRequest;
-import com.reydiazz.bodeko.core.order.orderDetails.web.response.OrderDetailResponse;
+import com.reydiazz.bodeko.core.order.details.service.OrderDetailService;
+import com.reydiazz.bodeko.core.order.details.web.request.CreateOrderDetailRequest;
+import com.reydiazz.bodeko.core.order.details.web.request.UpdateOrderDetailRequest;
+import com.reydiazz.bodeko.core.order.details.web.response.OrderDetailResponse;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

@@ -1,7 +1,7 @@
-package com.reydiazz.bodeko.core.order.orderDetails.componet;
+package com.reydiazz.bodeko.core.order.details.componet;
 
-import com.reydiazz.bodeko.core.order.orderDetails.entity.OrderDetail;
-import com.reydiazz.bodeko.core.order.orderDetails.web.response.OrderDetailResponse;
+import com.reydiazz.bodeko.core.order.details.entity.OrderDetail;
+import com.reydiazz.bodeko.core.order.details.web.response.OrderDetailResponse;
 import org.springframework.stereotype.Component;
 
 @Component

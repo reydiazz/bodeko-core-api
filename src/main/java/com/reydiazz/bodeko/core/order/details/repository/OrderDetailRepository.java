@@ -1,6 +1,6 @@
-package com.reydiazz.bodeko.core.order.orderDetails.repository;
+package com.reydiazz.bodeko.core.order.details.repository;
 
-import com.reydiazz.bodeko.core.order.orderDetails.entity.OrderDetail;
+import com.reydiazz.bodeko.core.order.details.entity.OrderDetail;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.UUID;

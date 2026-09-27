@@ -1,16 +1,15 @@
-package com.reydiazz.bodeko.core.order.orderDetails.service;
+package com.reydiazz.bodeko.core.order.details.service;
 
 import com.github.f4b6a3.uuid.UuidCreator;
-import com.reydiazz.bodeko.core.order.core.exception.OrderNotFoundException;
 import com.reydiazz.bodeko.core.order.core.model.entity.Order;
 import com.reydiazz.bodeko.core.order.core.service.OrderService;
-import com.reydiazz.bodeko.core.order.orderDetails.componet.OrderDetailMapper;
-import com.reydiazz.bodeko.core.order.orderDetails.entity.OrderDetail;
-import com.reydiazz.bodeko.core.order.orderDetails.exception.OrderDetailNotFoundException;
-import com.reydiazz.bodeko.core.order.orderDetails.repository.OrderDetailRepository;
-import com.reydiazz.bodeko.core.order.orderDetails.web.request.CreateOrderDetailRequest;
-import com.reydiazz.bodeko.core.order.orderDetails.web.request.UpdateOrderDetailRequest;
-import com.reydiazz.bodeko.core.order.orderDetails.web.response.OrderDetailResponse;
+import com.reydiazz.bodeko.core.order.details.componet.OrderDetailMapper;
+import com.reydiazz.bodeko.core.order.details.entity.OrderDetail;
+import com.reydiazz.bodeko.core.order.details.exception.OrderDetailNotFoundException;
+import com.reydiazz.bodeko.core.order.details.repository.OrderDetailRepository;
+import com.reydiazz.bodeko.core.order.details.web.request.CreateOrderDetailRequest;
+import com.reydiazz.bodeko.core.order.details.web.request.UpdateOrderDetailRequest;
+import com.reydiazz.bodeko.core.order.details.web.response.OrderDetailResponse;
 import com.reydiazz.bodeko.core.product.core.model.entity.Product;
 import com.reydiazz.bodeko.core.product.core.service.ProductService;
 import lombok.RequiredArgsConstructor;

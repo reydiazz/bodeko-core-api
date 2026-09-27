@@ -1,4 +1,4 @@
-package com.reydiazz.bodeko.core.order.orderDetails.entity;
+package com.reydiazz.bodeko.core.order.details.entity;
 
 
 import com.reydiazz.bodeko.core.order.core.model.entity.Order;
