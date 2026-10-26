@@ -6,7 +6,6 @@ import java.util.UUID;
 public record AuthResponse(
         UUID id,
         String name,
-        String email,
-        OffsetDateTime subscriptionLimit
+        String email
 ) {
 }

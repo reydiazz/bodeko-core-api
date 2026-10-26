@@ -11,9 +11,8 @@ public class AuthMapper {
     public AuthResponse toResponse(User user) {
         return new AuthResponse(
                 user.getId(),
-                user.getName(),
-                user.getEmail(),
-                user.getSubscriptionLimit()
+                user.getFullName(),
+                user.getEmail()
         );
     }
 
