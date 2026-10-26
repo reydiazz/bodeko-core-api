@@ -30,7 +30,7 @@ public record UserPrincipal(User user) implements UserDetails {
 
     @Override
     public boolean isEnabled() {
-        return user.isAccess();
+        return user.isActive();
     }
 
 }
