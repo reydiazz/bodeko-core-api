@@ -38,7 +38,9 @@ public class Product {
     @JoinColumns({
             @JoinColumn(
                     name = "category_id",
-                    referencedColumnName = "id"
+                    referencedColumnName = "id",
+                    insertable = false,
+                    updatable = false
             ),
             @JoinColumn(
                     name = "store_id",
