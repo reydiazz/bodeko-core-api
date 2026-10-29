@@ -1,6 +1,6 @@
 package com.reydiazz.bodeko.core.inventory.model.entity;
 
-import com.reydiazz.bodeko.core.product.model.entity.Product;
+import com.reydiazz.bodeko.core.product.core.model.entity.Product;
 import jakarta.persistence.*;
 import lombok.*;
 

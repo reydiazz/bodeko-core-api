@@ -1,7 +1,7 @@
-package com.reydiazz.bodeko.core.product.model.entity;
+package com.reydiazz.bodeko.core.product.core.model.entity;
 
 import com.reydiazz.bodeko.core.category.model.Category;
-import com.reydiazz.bodeko.core.product.model.enums.ProductStatus;
+import com.reydiazz.bodeko.core.product.core.model.enums.ProductStatus;
 import com.reydiazz.bodeko.core.store.model.entity.Store;
 import jakarta.persistence.*;
 import lombok.*;
@@ -35,20 +35,10 @@ public class Product {
     private Store store;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumns({
-            @JoinColumn(
-                    name = "category_id",
-                    referencedColumnName = "id",
-                    insertable = false,
-                    updatable = false
-            ),
-            @JoinColumn(
-                    name = "store_id",
-                    referencedColumnName = "store_id",
-                    insertable = false,
-                    updatable = false
-            )
-    })
+    @JoinColumn(
+            name = "category_id",
+            referencedColumnName = "id"
+    )
     private Category category;
 
     @Column(name = "name",nullable = false)
@@ -60,7 +50,7 @@ public class Product {
     @Column(name = "base_price",nullable = false)
     private BigDecimal basePrice;
 
-    @Column(name = "imagen_url",nullable = false)
+    @Column(name = "image_url",nullable = false)
     private String imageUrl;
 
     @Builder.Default

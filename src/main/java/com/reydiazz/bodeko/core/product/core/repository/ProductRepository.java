@@ -1,6 +1,6 @@
-package com.reydiazz.bodeko.core.product.repository;
+package com.reydiazz.bodeko.core.product.core.repository;
 
-import com.reydiazz.bodeko.core.product.model.entity.Product;
+import com.reydiazz.bodeko.core.product.core.model.entity.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.UUID;
