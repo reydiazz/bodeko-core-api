@@ -1,7 +1,7 @@
-package com.reydiazz.bodeko.core.order.model.entity;
+package com.reydiazz.bodeko.core.order.core.model.entity;
 
-import com.reydiazz.bodeko.core.order.model.enums.InvoiceType;
-import com.reydiazz.bodeko.core.order.model.enums.OrderStatus;
+import com.reydiazz.bodeko.core.order.core.model.enums.InvoiceType;
+import com.reydiazz.bodeko.core.order.core.model.enums.OrderStatus;
 import com.reydiazz.bodeko.core.store.model.entity.Store;
 import com.reydiazz.bodeko.core.user.core.model.entity.User;
 import jakarta.persistence.*;
@@ -16,7 +16,29 @@ import java.util.UUID;
 
 @Builder
 @Entity
-@Table(name = "orders")
+@Table(
+        name = "orders",
+        uniqueConstraints = {
+                @UniqueConstraint(
+                        name = "uq_orders_id_store",
+                        columnNames = {"id", "store_id"}
+                )
+        },
+        indexes = {
+                @Index(
+                        name = "idx_orders_store_status",
+                        columnList = "store_id, status"
+                ),
+                @Index(
+                        name = "idx_orders_customer_id",
+                        columnList = "customer_id"
+                ),
+                @Index(
+                        name = "idx_orders_created_at",
+                        columnList = "created_at"
+                )
+        }
+)
 @RequiredArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor(access = AccessLevel.PROTECTED)
 public class Order {
