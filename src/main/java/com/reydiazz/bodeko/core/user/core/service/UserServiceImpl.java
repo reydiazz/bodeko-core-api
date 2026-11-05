@@ -1,6 +1,7 @@
 package com.reydiazz.bodeko.core.user.core.service;
 
 import com.github.f4b6a3.uuid.UuidCreator;
+import com.reydiazz.bodeko.core.user.core.exception.UserEmailExistException;
 import com.reydiazz.bodeko.core.user.core.exception.UserErrorCode;
 import com.reydiazz.bodeko.core.user.core.model.entity.User;
 import com.reydiazz.bodeko.core.user.core.model.enums.UserRole;
@@ -57,7 +58,7 @@ public class UserServiceImpl implements UserService {
 
     private void validateEmailIsAvailable(String email) {
         if (userRepository.findByEmail(email).isPresent()) {
-            throw new BusinessException(UserErrorCode.EMAIL_ALREADY_IN_USE);
+            throw new UserEmailExistException();
         }
     }
 
