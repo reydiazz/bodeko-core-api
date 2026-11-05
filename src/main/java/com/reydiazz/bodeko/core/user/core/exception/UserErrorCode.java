@@ -9,25 +9,14 @@ import org.springframework.http.HttpStatus;
 @RequiredArgsConstructor
 public enum UserErrorCode implements ErrorCode {
 
-
     EMAIL_ALREADY_IN_USE(
-            HttpStatus.CONFLICT,
-            "The email is already in use."
-    ),
-    DOCUMENT_INCOMPLETE(
-            HttpStatus.BAD_REQUEST,
-            "Document type and document number must be provided together."
-    ),
-    INVALID_DOCUMENT_NUMBER(
-            HttpStatus.BAD_REQUEST,
-            "The document number does not match the format of the selected document type."
+            "USER_EMAIL_EXIST",
+            "The email is already in use.",
+            HttpStatus.CONFLICT
     );
 
-    private final HttpStatus httpStatus;
+    private final String code;
     private final String message;
+    private final HttpStatus httpStatus;
 
-    @Override
-    public String getCode() {
-        return name();
-    }
 }
