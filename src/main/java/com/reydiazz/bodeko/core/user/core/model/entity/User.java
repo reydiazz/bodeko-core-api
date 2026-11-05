@@ -26,30 +26,18 @@ public class User {
     @Column(name = "password_hash", nullable = false)
     private String password;
 
+    @Column(name = "phone_number" , length = 20)
+    private String phoneNumber;
+
     @Column(name = "full_name", nullable = false, length = 150)
     private String fullName;
 
-    @Builder.Default
-    @Enumerated(EnumType.STRING)
-    @Column(name = "document_type", length = 20)
-    private UserDocumentType documentType = UserDocumentType.DNI;
-
-    @Column(name = "document_number", length = 20)
-    private String documentNumber;
-
-    @Column(name = "business_name", length = 200)
-    private String businessName;
-
-    @Column(name = "billing_address", length = 300)
-    private String billingAddress;
-
-    @Builder.Default
-    @Enumerated(EnumType.STRING)
-    @Column(name = "role", nullable = false, length = 20)
-    private UserRole role = UserRole.CUSTOMER;
-
     @Column(name = "created_at", nullable = false, updatable = false)
     private OffsetDateTime createdAt;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "role", nullable = false, length = 20)
+    private UserRole role;
 
     @Builder.Default
     @Column(name = "is_active", nullable = false)

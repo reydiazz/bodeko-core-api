@@ -92,7 +92,9 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(HttpMethod.OPTIONS, API_PATTERN).permitAll()
                         .requestMatchers(
-                                AuthRoutes.API_BASE + AuthRoutes.LOGIN)
+                                AuthRoutes.API_BASE + AuthRoutes.LOGIN,
+                                AuthRoutes.API_BASE + AuthRoutes.REGISTER_CUSTOMER,
+                                AuthRoutes.API_BASE + AuthRoutes.REGISTER_OWNER)
                         .permitAll()
                         .anyRequest().authenticated()
                 )
