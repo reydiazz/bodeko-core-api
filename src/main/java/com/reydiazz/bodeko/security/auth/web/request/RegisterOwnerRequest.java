@@ -1,12 +1,8 @@
-package com.reydiazz.bodeko.core.user.core.web.request;
+package com.reydiazz.bodeko.security.auth.web.request;
 
-import com.reydiazz.bodeko.core.user.core.model.enums.UserDocumentType;
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Size;
+import jakarta.validation.constraints.*;
 
-public record CreateUserRequest(
+public record RegisterOwnerRequest(
 
         @NotBlank(message = "Email is required")
         @Email(message = "Email format is invalid")
@@ -21,11 +17,12 @@ public record CreateUserRequest(
         @Size(max = 150, message = "Full name must have at most 150 characters")
         String fullName,
 
-        UserDocumentType documentType,
-
-        @Size(max = 20, message = "Document number must have at most 20 characters")
-        String documentNumber
-
+        @NotNull
+        @Pattern(
+                regexp = "^\\+[1-9]\\d{7,14}$",
+                message = "Phone number must include the country code")
+        @Size(max = 20, message = "Phone number cannot exceed 20 characters")
+        String phoneNumber
 
 ) {
 }
